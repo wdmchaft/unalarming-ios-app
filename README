@@ -1,0 +1,11 @@
+
+Unalarming
+==========
+
+This is a simple iOS verison of the meditation alarm that I wrote for Android.  It is not feature complete with the Android version (for example, it does not block phone class like the Android version). 
+
+I present this as a simple step toward learning Objective-C, Cocoa Touch/iOS, and Xcode.  If you see anything glaring or generally stupid - please feel free to comment and educate me on my mistake.  I want to be as idiomatic as possible (as soon as possible). 
+
+Cheers! 
+
+Andy
