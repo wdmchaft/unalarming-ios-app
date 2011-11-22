@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C52493F147C07B5007AE1D2 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C52493E147C07B5007AE1D2 /* Icon.png */; };
 		2C524942147C07C1007AE1D2 /* ryoanji_bell_med320x480.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C524941147C07C1007AE1D2 /* ryoanji_bell_med320x480.jpg */; };
+		2C524965147C3261007AE1D2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C524964147C3261007AE1D2 /* AudioToolbox.framework */; };
 		2CB9AA25147C04D60098F2D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB9AA24147C04D60098F2D0 /* UIKit.framework */; };
 		2CB9AA27147C04D60098F2D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB9AA26147C04D60098F2D0 /* Foundation.framework */; };
 		2CB9AA29147C04D60098F2D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB9AA28147C04D60098F2D0 /* CoreGraphics.framework */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		2C52493E147C07B5007AE1D2 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		2C524941147C07C1007AE1D2 /* ryoanji_bell_med320x480.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ryoanji_bell_med320x480.jpg; sourceTree = "<group>"; };
+		2C524964147C3261007AE1D2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		2CB9AA20147C04D60098F2D0 /* UnalarmingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnalarmingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB9AA24147C04D60098F2D0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2CB9AA26147C04D60098F2D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C524965147C3261007AE1D2 /* AudioToolbox.framework in Frameworks */,
 				2CB9AA25147C04D60098F2D0 /* UIKit.framework in Frameworks */,
 				2CB9AA27147C04D60098F2D0 /* Foundation.framework in Frameworks */,
 				2CB9AA29147C04D60098F2D0 /* CoreGraphics.framework in Frameworks */,
@@ -98,6 +101,7 @@
 		2CB9AA15147C04D60098F2D0 = {
 			isa = PBXGroup;
 			children = (
+				2C524964147C3261007AE1D2 /* AudioToolbox.framework */,
 				2C524943147C07D8007AE1D2 /* Resources */,
 				2CB9AA2A147C04D60098F2D0 /* UnalarmingApp */,
 				2CB9AA4A147C04D70098F2D0 /* UnalarmingAppTests */,
