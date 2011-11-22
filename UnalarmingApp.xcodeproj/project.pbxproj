@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C52493F147C07B5007AE1D2 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C52493E147C07B5007AE1D2 /* Icon.png */; };
+		2C524942147C07C1007AE1D2 /* ryoanji_bell_med320x480.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C524941147C07C1007AE1D2 /* ryoanji_bell_med320x480.jpg */; };
 		2CB9AA25147C04D60098F2D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB9AA24147C04D60098F2D0 /* UIKit.framework */; };
 		2CB9AA27147C04D60098F2D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB9AA26147C04D60098F2D0 /* Foundation.framework */; };
 		2CB9AA29147C04D60098F2D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB9AA28147C04D60098F2D0 /* CoreGraphics.framework */; };
@@ -35,24 +37,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C52493E147C07B5007AE1D2 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		2C524941147C07C1007AE1D2 /* ryoanji_bell_med320x480.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ryoanji_bell_med320x480.jpg; sourceTree = "<group>"; };
 		2CB9AA20147C04D60098F2D0 /* UnalarmingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnalarmingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB9AA24147C04D60098F2D0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2CB9AA26147C04D60098F2D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2CB9AA28147C04D60098F2D0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		2CB9AA2C147C04D60098F2D0 /* UnalarmingApp-Info.plist */ = {isa = PBXFileReference; path = "UnalarmingApp-Info.plist"; sourceTree = "<group>"; };
+		2CB9AA2C147C04D60098F2D0 /* UnalarmingApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnalarmingApp-Info.plist"; sourceTree = "<group>"; };
 		2CB9AA2E147C04D60098F2D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2CB9AA30147C04D60098F2D0 /* UnalarmingApp-Prefix.pch */ = {isa = PBXFileReference; path = "UnalarmingApp-Prefix.pch"; sourceTree = "<group>"; };
+		2CB9AA30147C04D60098F2D0 /* UnalarmingApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnalarmingApp-Prefix.pch"; sourceTree = "<group>"; };
 		2CB9AA31147C04D60098F2D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2CB9AA33147C04D60098F2D0 /* UnalarmingAppAppDelegate.h */ = {isa = PBXFileReference; path = UnalarmingAppAppDelegate.h; sourceTree = "<group>"; };
+		2CB9AA33147C04D60098F2D0 /* UnalarmingAppAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnalarmingAppAppDelegate.h; sourceTree = "<group>"; };
 		2CB9AA34147C04D60098F2D0 /* UnalarmingAppAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnalarmingAppAppDelegate.m; sourceTree = "<group>"; };
 		2CB9AA37147C04D60098F2D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		2CB9AA39147C04D60098F2D0 /* UnalarmingAppViewController.h */ = {isa = PBXFileReference; path = UnalarmingAppViewController.h; sourceTree = "<group>"; };
+		2CB9AA39147C04D60098F2D0 /* UnalarmingAppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnalarmingAppViewController.h; sourceTree = "<group>"; };
 		2CB9AA3A147C04D60098F2D0 /* UnalarmingAppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnalarmingAppViewController.m; sourceTree = "<group>"; };
 		2CB9AA3D147C04D60098F2D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/UnalarmingAppViewController.xib; sourceTree = "<group>"; };
 		2CB9AA44147C04D60098F2D0 /* UnalarmingAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnalarmingAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CB9AA4C147C04D70098F2D0 /* UnalarmingAppTests-Info.plist */ = {isa = PBXFileReference; path = "UnalarmingAppTests-Info.plist"; sourceTree = "<group>"; };
+		2CB9AA4C147C04D70098F2D0 /* UnalarmingAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnalarmingAppTests-Info.plist"; sourceTree = "<group>"; };
 		2CB9AA4E147C04D70098F2D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2CB9AA50147C04D70098F2D0 /* UnalarmingAppTests-Prefix.pch */ = {isa = PBXFileReference; path = "UnalarmingAppTests-Prefix.pch"; sourceTree = "<group>"; };
+		2CB9AA50147C04D70098F2D0 /* UnalarmingAppTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnalarmingAppTests-Prefix.pch"; sourceTree = "<group>"; };
 		2CB9AA51147C04D70098F2D0 /* UnalarmingAppTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnalarmingAppTests.h; sourceTree = "<group>"; };
 		2CB9AA53147C04D70098F2D0 /* UnalarmingAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnalarmingAppTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,9 +85,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C524943147C07D8007AE1D2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C524941147C07C1007AE1D2 /* ryoanji_bell_med320x480.jpg */,
+				2C52493E147C07B5007AE1D2 /* Icon.png */,
+			);
+			name = Resources;
+			path = UnalarmingApp;
+			sourceTree = "<group>";
+		};
 		2CB9AA15147C04D60098F2D0 = {
 			isa = PBXGroup;
 			children = (
+				2C524943147C07D8007AE1D2 /* Resources */,
 				2CB9AA2A147C04D60098F2D0 /* UnalarmingApp */,
 				2CB9AA4A147C04D70098F2D0 /* UnalarmingAppTests */,
 				2CB9AA23147C04D60098F2D0 /* Frameworks */,
@@ -225,6 +240,8 @@
 				2CB9AA2F147C04D60098F2D0 /* InfoPlist.strings in Resources */,
 				2CB9AA38147C04D60098F2D0 /* MainWindow.xib in Resources */,
 				2CB9AA3E147C04D60098F2D0 /* UnalarmingAppViewController.xib in Resources */,
+				2C52493F147C07B5007AE1D2 /* Icon.png in Resources */,
+				2C524942147C07C1007AE1D2 /* ryoanji_bell_med320x480.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +460,7 @@
 				2CB9AA59147C04D70098F2D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CB9AA5A147C04D70098F2D0 /* Build configuration list for PBXNativeTarget "UnalarmingAppTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +469,7 @@
 				2CB9AA5C147C04D70098F2D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

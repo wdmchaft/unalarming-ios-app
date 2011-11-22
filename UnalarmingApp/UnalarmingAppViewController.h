@@ -6,10 +6,17 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#import <AudioToolbox/AudioToolbox.h>
 #import <UIKit/UIKit.h>
 
 @interface UnalarmingAppViewController : UIViewController {
-    
+    UIButton* alarmButton;
 }
+
+@property (retain) IBOutlet UIButton* alarmButton;
+
+- (IBAction) setAlarm: (id) sender;
+- (void) showAlert;
+- (void) triggerVibration;
 
 @end
