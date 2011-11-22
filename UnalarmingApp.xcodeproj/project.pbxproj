@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CB9AA25147C04D60098F2D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB9AA24147C04D60098F2D0 /* UIKit.framework */; };
+		2CB9AA27147C04D60098F2D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB9AA26147C04D60098F2D0 /* Foundation.framework */; };
+		2CB9AA29147C04D60098F2D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB9AA28147C04D60098F2D0 /* CoreGraphics.framework */; };
+		2CB9AA2F147C04D60098F2D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CB9AA2D147C04D60098F2D0 /* InfoPlist.strings */; };
+		2CB9AA32147C04D60098F2D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9AA31147C04D60098F2D0 /* main.m */; };
+		2CB9AA35147C04D60098F2D0 /* UnalarmingAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9AA34147C04D60098F2D0 /* UnalarmingAppAppDelegate.m */; };
+		2CB9AA38147C04D60098F2D0 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CB9AA36147C04D60098F2D0 /* MainWindow.xib */; };
+		2CB9AA3B147C04D60098F2D0 /* UnalarmingAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9AA3A147C04D60098F2D0 /* UnalarmingAppViewController.m */; };
+		2CB9AA3E147C04D60098F2D0 /* UnalarmingAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CB9AA3C147C04D60098F2D0 /* UnalarmingAppViewController.xib */; };
+		2CB9AA45147C04D70098F2D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB9AA24147C04D60098F2D0 /* UIKit.framework */; };
+		2CB9AA46147C04D70098F2D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB9AA26147C04D60098F2D0 /* Foundation.framework */; };
+		2CB9AA47147C04D70098F2D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB9AA28147C04D60098F2D0 /* CoreGraphics.framework */; };
+		2CB9AA4F147C04D70098F2D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CB9AA4D147C04D70098F2D0 /* InfoPlist.strings */; };
+		2CB9AA52147C04D70098F2D0 /* UnalarmingAppTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 2CB9AA51147C04D70098F2D0 /* UnalarmingAppTests.h */; };
+		2CB9AA54147C04D70098F2D0 /* UnalarmingAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9AA53147C04D70098F2D0 /* UnalarmingAppTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CB9AA48147C04D70098F2D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CB9AA17147C04D60098F2D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CB9AA1F147C04D60098F2D0;
+			remoteInfo = UnalarmingApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2CB9AA20147C04D60098F2D0 /* UnalarmingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnalarmingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CB9AA24147C04D60098F2D0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2CB9AA26147C04D60098F2D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2CB9AA28147C04D60098F2D0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2CB9AA2C147C04D60098F2D0 /* UnalarmingApp-Info.plist */ = {isa = PBXFileReference; path = "UnalarmingApp-Info.plist"; sourceTree = "<group>"; };
+		2CB9AA2E147C04D60098F2D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2CB9AA30147C04D60098F2D0 /* UnalarmingApp-Prefix.pch */ = {isa = PBXFileReference; path = "UnalarmingApp-Prefix.pch"; sourceTree = "<group>"; };
+		2CB9AA31147C04D60098F2D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2CB9AA33147C04D60098F2D0 /* UnalarmingAppAppDelegate.h */ = {isa = PBXFileReference; path = UnalarmingAppAppDelegate.h; sourceTree = "<group>"; };
+		2CB9AA34147C04D60098F2D0 /* UnalarmingAppAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnalarmingAppAppDelegate.m; sourceTree = "<group>"; };
+		2CB9AA37147C04D60098F2D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		2CB9AA39147C04D60098F2D0 /* UnalarmingAppViewController.h */ = {isa = PBXFileReference; path = UnalarmingAppViewController.h; sourceTree = "<group>"; };
+		2CB9AA3A147C04D60098F2D0 /* UnalarmingAppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnalarmingAppViewController.m; sourceTree = "<group>"; };
+		2CB9AA3D147C04D60098F2D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/UnalarmingAppViewController.xib; sourceTree = "<group>"; };
+		2CB9AA44147C04D60098F2D0 /* UnalarmingAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnalarmingAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CB9AA4C147C04D70098F2D0 /* UnalarmingAppTests-Info.plist */ = {isa = PBXFileReference; path = "UnalarmingAppTests-Info.plist"; sourceTree = "<group>"; };
+		2CB9AA4E147C04D70098F2D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2CB9AA50147C04D70098F2D0 /* UnalarmingAppTests-Prefix.pch */ = {isa = PBXFileReference; path = "UnalarmingAppTests-Prefix.pch"; sourceTree = "<group>"; };
+		2CB9AA51147C04D70098F2D0 /* UnalarmingAppTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnalarmingAppTests.h; sourceTree = "<group>"; };
+		2CB9AA53147C04D70098F2D0 /* UnalarmingAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnalarmingAppTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CB9AA1D147C04D60098F2D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CB9AA25147C04D60098F2D0 /* UIKit.framework in Frameworks */,
+				2CB9AA27147C04D60098F2D0 /* Foundation.framework in Frameworks */,
+				2CB9AA29147C04D60098F2D0 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CB9AA40147C04D60098F2D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CB9AA45147C04D70098F2D0 /* UIKit.framework in Frameworks */,
+				2CB9AA46147C04D70098F2D0 /* Foundation.framework in Frameworks */,
+				2CB9AA47147C04D70098F2D0 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2CB9AA15147C04D60098F2D0 = {
+			isa = PBXGroup;
+			children = (
+				2CB9AA2A147C04D60098F2D0 /* UnalarmingApp */,
+				2CB9AA4A147C04D70098F2D0 /* UnalarmingAppTests */,
+				2CB9AA23147C04D60098F2D0 /* Frameworks */,
+				2CB9AA21147C04D60098F2D0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2CB9AA21147C04D60098F2D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CB9AA20147C04D60098F2D0 /* UnalarmingApp.app */,
+				2CB9AA44147C04D60098F2D0 /* UnalarmingAppTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2CB9AA23147C04D60098F2D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2CB9AA24147C04D60098F2D0 /* UIKit.framework */,
+				2CB9AA26147C04D60098F2D0 /* Foundation.framework */,
+				2CB9AA28147C04D60098F2D0 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2CB9AA2A147C04D60098F2D0 /* UnalarmingApp */ = {
+			isa = PBXGroup;
+			children = (
+				2CB9AA33147C04D60098F2D0 /* UnalarmingAppAppDelegate.h */,
+				2CB9AA34147C04D60098F2D0 /* UnalarmingAppAppDelegate.m */,
+				2CB9AA36147C04D60098F2D0 /* MainWindow.xib */,
+				2CB9AA39147C04D60098F2D0 /* UnalarmingAppViewController.h */,
+				2CB9AA3A147C04D60098F2D0 /* UnalarmingAppViewController.m */,
+				2CB9AA3C147C04D60098F2D0 /* UnalarmingAppViewController.xib */,
+				2CB9AA2B147C04D60098F2D0 /* Supporting Files */,
+			);
+			path = UnalarmingApp;
+			sourceTree = "<group>";
+		};
+		2CB9AA2B147C04D60098F2D0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CB9AA2C147C04D60098F2D0 /* UnalarmingApp-Info.plist */,
+				2CB9AA2D147C04D60098F2D0 /* InfoPlist.strings */,
+				2CB9AA30147C04D60098F2D0 /* UnalarmingApp-Prefix.pch */,
+				2CB9AA31147C04D60098F2D0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2CB9AA4A147C04D70098F2D0 /* UnalarmingAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				2CB9AA51147C04D70098F2D0 /* UnalarmingAppTests.h */,
+				2CB9AA53147C04D70098F2D0 /* UnalarmingAppTests.m */,
+				2CB9AA4B147C04D70098F2D0 /* Supporting Files */,
+			);
+			path = UnalarmingAppTests;
+			sourceTree = "<group>";
+		};
+		2CB9AA4B147C04D70098F2D0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CB9AA4C147C04D70098F2D0 /* UnalarmingAppTests-Info.plist */,
+				2CB9AA4D147C04D70098F2D0 /* InfoPlist.strings */,
+				2CB9AA50147C04D70098F2D0 /* UnalarmingAppTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2CB9AA1F147C04D60098F2D0 /* UnalarmingApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CB9AA57147C04D70098F2D0 /* Build configuration list for PBXNativeTarget "UnalarmingApp" */;
+			buildPhases = (
+				2CB9AA1C147C04D60098F2D0 /* Sources */,
+				2CB9AA1D147C04D60098F2D0 /* Frameworks */,
+				2CB9AA1E147C04D60098F2D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnalarmingApp;
+			productName = UnalarmingApp;
+			productReference = 2CB9AA20147C04D60098F2D0 /* UnalarmingApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2CB9AA43147C04D60098F2D0 /* UnalarmingAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CB9AA5A147C04D70098F2D0 /* Build configuration list for PBXNativeTarget "UnalarmingAppTests" */;
+			buildPhases = (
+				2CB9AA3F147C04D60098F2D0 /* Sources */,
+				2CB9AA40147C04D60098F2D0 /* Frameworks */,
+				2CB9AA41147C04D60098F2D0 /* Resources */,
+				2CB9AA42147C04D60098F2D0 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CB9AA49147C04D70098F2D0 /* PBXTargetDependency */,
+			);
+			name = UnalarmingAppTests;
+			productName = UnalarmingAppTests;
+			productReference = 2CB9AA44147C04D60098F2D0 /* UnalarmingAppTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CB9AA17147C04D60098F2D0 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 2CB9AA1A147C04D60098F2D0 /* Build configuration list for PBXProject "UnalarmingApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2CB9AA15147C04D60098F2D0;
+			productRefGroup = 2CB9AA21147C04D60098F2D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CB9AA1F147C04D60098F2D0 /* UnalarmingApp */,
+				2CB9AA43147C04D60098F2D0 /* UnalarmingAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2CB9AA1E147C04D60098F2D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CB9AA2F147C04D60098F2D0 /* InfoPlist.strings in Resources */,
+				2CB9AA38147C04D60098F2D0 /* MainWindow.xib in Resources */,
+				2CB9AA3E147C04D60098F2D0 /* UnalarmingAppViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CB9AA41147C04D60098F2D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CB9AA4F147C04D70098F2D0 /* InfoPlist.strings in Resources */,
+				2CB9AA52147C04D70098F2D0 /* UnalarmingAppTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CB9AA42147C04D60098F2D0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CB9AA1C147C04D60098F2D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CB9AA32147C04D60098F2D0 /* main.m in Sources */,
+				2CB9AA35147C04D60098F2D0 /* UnalarmingAppAppDelegate.m in Sources */,
+				2CB9AA3B147C04D60098F2D0 /* UnalarmingAppViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CB9AA3F147C04D60098F2D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CB9AA54147C04D70098F2D0 /* UnalarmingAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CB9AA49147C04D70098F2D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CB9AA1F147C04D60098F2D0 /* UnalarmingApp */;
+			targetProxy = 2CB9AA48147C04D70098F2D0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2CB9AA2D147C04D60098F2D0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CB9AA2E147C04D60098F2D0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2CB9AA36147C04D60098F2D0 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CB9AA37147C04D60098F2D0 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		2CB9AA3C147C04D60098F2D0 /* UnalarmingAppViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CB9AA3D147C04D60098F2D0 /* en */,
+			);
+			name = UnalarmingAppViewController.xib;
+			sourceTree = "<group>";
+		};
+		2CB9AA4D147C04D70098F2D0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CB9AA4E147C04D70098F2D0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2CB9AA55147C04D70098F2D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2CB9AA56147C04D70098F2D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		2CB9AA58147C04D70098F2D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UnalarmingApp/UnalarmingApp-Prefix.pch";
+				INFOPLIST_FILE = "UnalarmingApp/UnalarmingApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2CB9AA59147C04D70098F2D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UnalarmingApp/UnalarmingApp-Prefix.pch";
+				INFOPLIST_FILE = "UnalarmingApp/UnalarmingApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2CB9AA5B147C04D70098F2D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UnalarmingApp.app/UnalarmingApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UnalarmingAppTests/UnalarmingAppTests-Prefix.pch";
+				INFOPLIST_FILE = "UnalarmingAppTests/UnalarmingAppTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		2CB9AA5C147C04D70098F2D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UnalarmingApp.app/UnalarmingApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UnalarmingAppTests/UnalarmingAppTests-Prefix.pch";
+				INFOPLIST_FILE = "UnalarmingAppTests/UnalarmingAppTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CB9AA1A147C04D60098F2D0 /* Build configuration list for PBXProject "UnalarmingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CB9AA55147C04D70098F2D0 /* Debug */,
+				2CB9AA56147C04D70098F2D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CB9AA57147C04D70098F2D0 /* Build configuration list for PBXNativeTarget "UnalarmingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CB9AA58147C04D70098F2D0 /* Debug */,
+				2CB9AA59147C04D70098F2D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2CB9AA5A147C04D70098F2D0 /* Build configuration list for PBXNativeTarget "UnalarmingAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CB9AA5B147C04D70098F2D0 /* Debug */,
+				2CB9AA5C147C04D70098F2D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2CB9AA17147C04D60098F2D0 /* Project object */;
+}
