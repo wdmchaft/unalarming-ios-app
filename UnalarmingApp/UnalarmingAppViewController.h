@@ -11,12 +11,17 @@
 
 @interface UnalarmingAppViewController : UIViewController {
     UIButton* alarmButton;
+    UIDatePicker* picker;
 }
 
 @property (retain) IBOutlet UIButton* alarmButton;
+@property (retain) UIDatePicker* picker;
 
 - (IBAction) setAlarm: (id) sender;
 - (void) showAlert;
 - (void) triggerVibration;
+- (void) finalizeAlarm;
+- (void) cancelSelection;
+- (void) cleanupPicker;
 
 @end

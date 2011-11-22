@@ -10,7 +10,7 @@
 
 @implementation UnalarmingAppViewController
 
-@synthesize alarmButton;
+@synthesize alarmButton, picker;
 
 - (void)dealloc
 {
@@ -45,25 +45,56 @@
     [self showAlert];
 }
 
-- (IBAction)setAlarm:(id)sender {
-    NSLog(@"setAlarm clicked...");
-    UIDatePicker* picker = [[UIDatePicker alloc] init];
-    picker.datePickerMode = UIDatePickerModeCountDownTimer;
+- (void) cleanupPicker {
+    [picker release];
+    [self.navigationItem.rightBarButtonItem release];
+    [self.navigationItem.leftBarButtonItem release];
+}
+
+- (void) finalizeAlarm {
+    NSLog(@"finalizeAlarm was called!");
     
-    CGRect screenRect = [[UIScreen mainScreen] applicationFrame];
-	CGRect endFrame = picker.frame;
-	endFrame.origin.y = screenRect.origin.y + screenRect.size.height;
-    
-    picker.frame = endFrame;
-    
-    // show picker - however I do that... 
     // temporarily make the interval 2 seconds, should be 
     // picker.countDownDuration
 	[NSTimer scheduledTimerWithTimeInterval:2.0f
                                      target:self 
                                    selector:@selector(triggerVibration)
                                    userInfo:nil 
-                                    repeats:NO];    
+                                    repeats:NO];
+    [self cleanupPicker];
+}
+
+- (void) cancelSelection {
+    NSLog(@"cancelSelection was called - we'll do some clean-up soon");
+    [self cleanupPicker];
+}
+
+- (IBAction)setAlarm:(id)sender {
+    NSLog(@"setAlarm clicked...");
+    self.picker = [[UIDatePicker alloc] init];
+    picker.datePickerMode = UIDatePickerModeCountDownTimer;
+
+    if (nil == picker.superview) {
+		[self.view.window addSubview: picker];
+		
+		// compute the start frame
+		CGRect screenRect = [[UIScreen mainScreen] applicationFrame];
+		CGSize pickerSize = [picker sizeThatFits:CGSizeZero];
+		CGRect startRect = CGRectMake(0.0,
+									  screenRect.origin.y + screenRect.size.height,
+									  pickerSize.width, pickerSize.height);
+		picker.frame = startRect;
+		
+		// compute the end frame
+		CGRect pickerRect = CGRectMake(0.0,
+									   screenRect.origin.y + screenRect.size.height - pickerSize.height,
+									   pickerSize.width,
+									   pickerSize.height);
+        picker.frame = pickerRect;
+        
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(finalizeAlarm)];
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelSelection)];
+    }
 }
 
 #pragma mark - View lifecycle
@@ -79,8 +110,10 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    [self cleanupPicker];
     // Release any retained subviews of the main view.
     self.alarmButton = nil;
+    self.picker = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
