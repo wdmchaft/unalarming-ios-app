@@ -10,9 +10,9 @@
 #import <UIKit/UIKit.h>
 
 @interface UnalarmingAppViewController : UIViewController {
-    UIButton* alarmButton;
-    UIView* selectionDialog;
-    UIDatePicker* picker;
+    UIButton* _alarmButton;
+    UIView* _selectionDialog;
+    UIDatePicker* _picker;
 }
 
 @property (retain) IBOutlet UIButton* alarmButton;

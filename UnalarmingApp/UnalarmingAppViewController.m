@@ -12,12 +12,14 @@ const int NAV_BAR_HEIGHT = 40;
 
 @implementation UnalarmingAppViewController
 
-@synthesize alarmButton, picker, selectionDialog;
+@synthesize alarmButton = _alarmButton;
+@synthesize picker = _picker;
+@synthesize selectionDialog = _selectionDialog;
 
 - (void)dealloc
 {
-    [alarmButton release];
-    [selectionDialog release];
+    [_alarmButton release];
+    [_selectionDialog release];
     [super dealloc];
 }
 
@@ -78,7 +80,7 @@ const int NAV_BAR_HEIGHT = 40;
     self.picker = [[UIDatePicker alloc] init];
     self.picker.datePickerMode = UIDatePickerModeCountDownTimer;    
 
-    CGSize pickerSize = [picker sizeThatFits:CGSizeZero];
+    CGSize pickerSize = [self.picker sizeThatFits:CGSizeZero];
     CGRect screenRect = [[UIScreen mainScreen] applicationFrame];
 
     CGRect viewRect = CGRectMake(0.0,
@@ -129,7 +131,7 @@ const int NAV_BAR_HEIGHT = 40;
     [self.view.window addSubview:self.selectionDialog];
 
     // the selectionDialog view has the retain on child widgets now, SWEET RELEASE!
-    [picker release];
+    [_picker release];
 }
 
 #pragma mark - View lifecycle
