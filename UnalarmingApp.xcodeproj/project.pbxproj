@@ -101,7 +101,6 @@
 		2CB9AA15147C04D60098F2D0 = {
 			isa = PBXGroup;
 			children = (
-				2C524964147C3261007AE1D2 /* AudioToolbox.framework */,
 				2C524943147C07D8007AE1D2 /* Resources */,
 				2CB9AA2A147C04D60098F2D0 /* UnalarmingApp */,
 				2CB9AA4A147C04D70098F2D0 /* UnalarmingAppTests */,
@@ -122,6 +121,7 @@
 		2CB9AA23147C04D60098F2D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C524964147C3261007AE1D2 /* AudioToolbox.framework */,
 				2CB9AA24147C04D60098F2D0 /* UIKit.framework */,
 				2CB9AA26147C04D60098F2D0 /* Foundation.framework */,
 				2CB9AA28147C04D60098F2D0 /* CoreGraphics.framework */,
