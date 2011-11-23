@@ -25,7 +25,7 @@ const int NAV_BAR_HEIGHT = 40;
 {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
+
     // Release any cached data, images, etc that aren't in use.
 }
 
@@ -43,7 +43,7 @@ const int NAV_BAR_HEIGHT = 40;
 - (void) triggerVibration {
     // Issue vibrate
 	AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-    
+
     [self showAlert];
 }
 
@@ -51,7 +51,7 @@ const int NAV_BAR_HEIGHT = 40;
 - (void) finalizeAlarm {
     NSLog(@"finalizeAlarm was called!");
     NSLog(@"FINAL COUNTDOWN! %@", self.picker.countDownDuration); 
-    
+
     // I think I want to autorelease this because it'll be a leak otherwise
 	[NSTimer scheduledTimerWithTimeInterval:self.picker.countDownDuration
                                      target:self 
@@ -77,10 +77,10 @@ const int NAV_BAR_HEIGHT = 40;
 - (UIView*)buildSelectionDialogView {
     self.picker = [[UIDatePicker alloc] init];
     self.picker.datePickerMode = UIDatePickerModeCountDownTimer;    
-    
+
     CGSize pickerSize = [picker sizeThatFits:CGSizeZero];
     CGRect screenRect = [[UIScreen mainScreen] applicationFrame];
-    
+
     CGRect viewRect = CGRectMake(0.0,
                                  screenRect.origin.y + screenRect.size.height - 
                                  (pickerSize.height + NAV_BAR_HEIGHT),
@@ -92,7 +92,7 @@ const int NAV_BAR_HEIGHT = 40;
                                    pickerSize.width,
                                    pickerSize.height);
     self.picker.frame = pickerRect;
-    
+
     UINavigationBar* navBar = [[UINavigationBar alloc] 
                                initWithFrame:CGRectMake(0.0, 
                                                         0.0, 
@@ -100,18 +100,18 @@ const int NAV_BAR_HEIGHT = 40;
                                                         NAV_BAR_HEIGHT)];
     navBar.barStyle = UIBarStyleBlack;
     [navBar pushNavigationItem:[[UINavigationItem alloc] init] animated:NO];
-    
+
     navBar.topItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(finalizeAlarm)] autorelease];
     navBar.topItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelSelection)] autorelease];
-    
+
     UIView* pickerView = [[UIView alloc] initWithFrame: viewRect];
     pickerView.backgroundColor = [UIColor redColor];
-    
+
     [pickerView addSubview:self.picker];
     [pickerView addSubview:navBar];
     // the navBar is retained by pickerView, SWEET RELEASE!
     [navBar release];
-    
+
     return pickerView;
 }
 
@@ -121,10 +121,9 @@ const int NAV_BAR_HEIGHT = 40;
     self.selectionDialog = [self buildSelectionDialogView];
     
     [self.view.window addSubview:self.selectionDialog];
-    
+
     // the selectionDialog view has the retain on child widgets now, SWEET RELEASE!
     [picker release];
-
 }
 
 #pragma mark - View lifecycle
