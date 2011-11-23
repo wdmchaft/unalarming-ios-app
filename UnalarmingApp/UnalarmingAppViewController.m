@@ -101,8 +101,14 @@ const int NAV_BAR_HEIGHT = 40;
     navBar.barStyle = UIBarStyleBlack;
     [navBar pushNavigationItem:[[UINavigationItem alloc] init] animated:NO];
 
-    navBar.topItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(finalizeAlarm)] autorelease];
-    navBar.topItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelSelection)] autorelease];
+    navBar.topItem.rightBarButtonItem = [[[UIBarButtonItem alloc] 
+                                          initWithBarButtonSystemItem:UIBarButtonSystemItemDone 
+                                          target:self 
+                                          action:@selector(finalizeAlarm)] autorelease];
+    navBar.topItem.leftBarButtonItem = [[[UIBarButtonItem alloc] 
+                                         initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
+                                         target:self 
+                                         action:@selector(cancelSelection)] autorelease];
 
     UIView* pickerView = [[UIView alloc] initWithFrame: viewRect];
     pickerView.backgroundColor = [UIColor redColor];
