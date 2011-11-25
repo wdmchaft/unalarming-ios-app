@@ -1,2 +1,4 @@
 # local definition of files to ignore
 *~
+# ignore backup files produced by ``rmws`` script
+*.bak
