@@ -11,7 +11,7 @@
 
 @interface UnalarmingAppTests : SenTestCase {
 @private
-    
+
 }
 
 @end
