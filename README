@@ -6,6 +6,12 @@ This is a simple iOS verison of the meditation alarm that I wrote for Android.  
 
 I present this as a simple step toward learning Objective-C, Cocoa Touch/iOS, and Xcode.  If you see anything glaring or generally stupid - please feel free to comment and educate me on my mistake.  I want to be as idiomatic as possible (as soon as possible). 
 
+## Future Work 
+
+* Add subview animation for the selection dialog view
+
+* Add alarm reminder to the notification/status bar 
+
 Cheers! 
 
 Andy
