@@ -116,6 +116,9 @@ const int NAV_BAR_HEIGHT = 40;
     pickerView.backgroundColor = [UIColor redColor];
 
     [pickerView addSubview:self.picker];
+    // so I think adding self.picker will up the retain count, but I have "assign" 
+    // on self.picker so the app isn't retaining it - but the subview is. Trying to
+    // reason about my retain-counts here for practice. 
     [pickerView addSubview:navBar];
     // the navBar is retained by pickerView, SWEET RELEASE!
     [navBar release];
