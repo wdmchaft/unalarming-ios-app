@@ -8,7 +8,18 @@
 
 #import "UnalarmingAppViewController.h"
 
+// dmandel: In general, unless you have a good reason not to, you should use NSInteger and NSUInteger for your integral types.
 const int NAV_BAR_HEIGHT = 40;
+
+
+// dmandel: This is how I usually do my private methods if they are only internal to the file -- the empty parens are a special type of category called a class continuation.  You can add private properties inside here, too.  If it is private API that other callers might need, you can also make a private header file.
+@interface UnalarmingAppViewController()
+
+- (UIView*) buildSelectionDialogView;
+- (void) showAlert;
+- (void) triggerVibration;
+
+@end
 
 @implementation UnalarmingAppViewController
 
@@ -77,6 +88,9 @@ const int NAV_BAR_HEIGHT = 40;
 }
 
 - (UIView*)buildSelectionDialogView {
+    
+    // dmandel: I see why Clang is complaining here.  It is definitely odd to define the property as 'assign' and then just give it a +1 retain count.
+    // I think it makes more sense for it to be a retain property and then when you init it, it should be autoreleased. 
     self.picker = [[UIDatePicker alloc] init];
     self.picker.datePickerMode = UIDatePickerModeCountDownTimer;
 
@@ -101,6 +115,7 @@ const int NAV_BAR_HEIGHT = 40;
                                                         pickerSize.width,
                                                         NAV_BAR_HEIGHT)];
     navBar.barStyle = UIBarStyleBlack;
+    // dmandel: I'm kinda surprised this doesn't show up as a leak in Instruments.  The item will be retained by the navBar and thus should be autoreleased when it is allocated here.  I could be wrong as I've not done UIKit stuff, but in general views own their subviews.
     [navBar pushNavigationItem:[[UINavigationItem alloc] init] animated:NO];
 
     navBar.topItem.rightBarButtonItem = [[[UIBarButtonItem alloc]
@@ -112,6 +127,9 @@ const int NAV_BAR_HEIGHT = 40;
                                          target:self
                                          action:@selector(cancelSelection)] autorelease];
 
+    // dmandel: The fact that this method returns a view that has a +1 retain count is incorrect.  The cocoa convention is that
+    // only things with a method name of “alloc”, “new”, “copy”, or “mutableCopy” http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/MemoryMgmt/Articles/mmRules.html have a +1 retain count
+    // anything else is presumed to be autoreleased so the caller will need to retain
     UIView* pickerView = [[UIView alloc] initWithFrame: viewRect];
     pickerView.backgroundColor = [UIColor redColor];
 
@@ -119,8 +137,12 @@ const int NAV_BAR_HEIGHT = 40;
     // so I think adding self.picker will up the retain count, but I have "assign"
     // on self.picker so the app isn't retaining it - but the subview is. Trying to
     // reason about my retain-counts here for practice.
+    
+    // dmandel: You have "assign" semantics on self.picker, but as I stated above it gets a +1 retain count on inception which is why it is sticking around.
+    
     [pickerView addSubview:navBar];
     // the navBar is retained by pickerView, SWEET RELEASE!
+    // dmandel: This is a good practice.  If you have local objects that you know are bound to a specific method, you absolutely want to do what you are doing here, and release after the object is living with its owner.  Otherwise you can pollute autorelease pools and get poor performance.  Probably wouldn't make a difference in this case, but it can kill you in a tight loop.
     [navBar release];
 
     return pickerView;
