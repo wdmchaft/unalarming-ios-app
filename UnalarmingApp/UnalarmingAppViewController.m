@@ -109,7 +109,7 @@ const NSUInteger NAV_BAR_HEIGHT = 40;
                                                         pickerSize.width,
                                                         NAV_BAR_HEIGHT)];
     navBar.barStyle = UIBarStyleBlack;
-    [navBar pushNavigationItem:[[UINavigationItem alloc] init] animated:NO];
+    [navBar pushNavigationItem:[[[UINavigationItem alloc] init] autorelease] animated:NO];
 
     navBar.topItem.rightBarButtonItem = [[[UIBarButtonItem alloc]
                                           initWithBarButtonSystemItem:UIBarButtonSystemItemDone
