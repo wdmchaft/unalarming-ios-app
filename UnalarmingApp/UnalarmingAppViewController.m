@@ -137,7 +137,7 @@ const NSUInteger NAV_BAR_HEIGHT = 40;
 - (IBAction)setAlarm:(id)sender {
     NSLog(@"setAlarm clicked...");
 
-    self.selectionDialog = [self buildSelectionDialogView];
+    self.selectionDialog = [self allocSelectionDialogView];
 
     [self.view.window addSubview:self.selectionDialog];
 
