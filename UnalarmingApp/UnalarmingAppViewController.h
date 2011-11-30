@@ -9,11 +9,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <UIKit/UIKit.h>
 
-@interface UnalarmingAppViewController : UIViewController {
-    UIButton* _alarmButton;
-    UIView* _selectionDialog;
-    UIDatePicker* _picker;
-}
+@interface UnalarmingAppViewController : UIViewController
 
 @property (nonatomic, retain) IBOutlet UIButton* alarmButton;
 // I'm marking this as "assign" because the dialog/subview
