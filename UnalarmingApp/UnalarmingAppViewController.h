@@ -18,9 +18,6 @@
 @property (assign) UIDatePicker* picker;
 @property (retain) UIView* selectionDialog;
 
-- (UIView*) buildSelectionDialogView;
 - (IBAction) setAlarm: (id) sender;
-- (void) showAlert;
-- (void) triggerVibration;
 
 @end

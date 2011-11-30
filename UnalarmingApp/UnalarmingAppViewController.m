@@ -8,7 +8,15 @@
 
 #import "UnalarmingAppViewController.h"
 
-const int NAV_BAR_HEIGHT = 40;
+const NSUInteger NAV_BAR_HEIGHT = 40;
+
+@interface UnalarmingAppViewController ()
+
+- (UIView*) buildSelectionDialogView;
+- (void) showAlert;
+- (void) triggerVibration;
+
+@end
 
 @implementation UnalarmingAppViewController
 
