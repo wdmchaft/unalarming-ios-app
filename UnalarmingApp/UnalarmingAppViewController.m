@@ -11,12 +11,9 @@
 // dmandel: In general, unless you have a good reason not to, you should use NSInteger and NSUInteger for your integral types.
 const int NAV_BAR_HEIGHT = 40;
 
+@interface UnalarmingAppViewController ()
 
-
-// dmandel: This is how I usually do my private methods if they are only internal to the file -- the empty parens are a special type of category called a class continuation.  You can add private properties inside here, too.  If it is private API that other callers might need, you can also make a private header file.
-@interface UnalarmingAppViewController()
-
-- (UIView*) buildSelectionDialogView;
+- (UIView*) allocSelectionDialogView;
 - (void) showAlert;
 - (void) triggerVibration;
 
@@ -88,10 +85,7 @@ const int NAV_BAR_HEIGHT = 40;
     //[selectionDialog release];
 }
 
-- (UIView*)buildSelectionDialogView {
-    
-    // dmandel: I see why Clang is complaining here.  It is definitely odd to define the property as 'assign' and then just give it a +1 retain count.
-    // I think it makes more sense for it to be a retain property and then when you init it, it should be autoreleased. 
+- (UIView*)allocSelectionDialogView {
     self.picker = [[UIDatePicker alloc] init];
     self.picker.datePickerMode = UIDatePickerModeCountDownTimer;
 
@@ -116,8 +110,7 @@ const int NAV_BAR_HEIGHT = 40;
                                                         pickerSize.width,
                                                         NAV_BAR_HEIGHT)];
     navBar.barStyle = UIBarStyleBlack;
-    // dmandel: I'm kinda surprised this doesn't show up as a leak in Instruments.  The item will be retained by the navBar and thus should be autoreleased when it is allocated here.  I could be wrong as I've not done UIKit stuff, but in general views own their subviews.
-    [navBar pushNavigationItem:[[UINavigationItem alloc] init] animated:NO];
+    [navBar pushNavigationItem:[[[UINavigationItem alloc] init] autorelease] animated:NO];
 
     navBar.topItem.rightBarButtonItem = [[[UIBarButtonItem alloc]
                                           initWithBarButtonSystemItem:UIBarButtonSystemItemDone
@@ -152,7 +145,7 @@ const int NAV_BAR_HEIGHT = 40;
 - (IBAction)setAlarm:(id)sender {
     NSLog(@"setAlarm clicked...");
 
-    self.selectionDialog = [self buildSelectionDialogView];
+    self.selectionDialog = [self allocSelectionDialogView];
 
     [self.view.window addSubview:self.selectionDialog];
 
