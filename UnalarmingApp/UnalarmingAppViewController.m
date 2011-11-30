@@ -12,7 +12,7 @@ const NSUInteger NAV_BAR_HEIGHT = 40;
 
 @interface UnalarmingAppViewController ()
 
-- (UIView*) buildSelectionDialogView;
+- (UIView*) allocSelectionDialogView;
 - (void) showAlert;
 - (void) triggerVibration;
 
@@ -84,7 +84,7 @@ const NSUInteger NAV_BAR_HEIGHT = 40;
     //[selectionDialog release];
 }
 
-- (UIView*)buildSelectionDialogView {
+- (UIView*)allocSelectionDialogView {
     self.picker = [[UIDatePicker alloc] init];
     self.picker.datePickerMode = UIDatePickerModeCountDownTimer;
 
