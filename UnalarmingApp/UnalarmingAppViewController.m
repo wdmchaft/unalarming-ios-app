@@ -12,6 +12,7 @@
 const int NAV_BAR_HEIGHT = 40;
 
 
+
 // dmandel: This is how I usually do my private methods if they are only internal to the file -- the empty parens are a special type of category called a class continuation.  You can add private properties inside here, too.  If it is private API that other callers might need, you can also make a private header file.
 @interface UnalarmingAppViewController()
 
