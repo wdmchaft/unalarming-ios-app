@@ -17,6 +17,7 @@
 // I'm marking this as "assign" because the dialog/subview
 // will be retaining it, so when I release that it'll be
 // cleaned up then (I think)
+
 @property (assign) UIDatePicker* picker;
 @property (retain) UIView* selectionDialog;
 
