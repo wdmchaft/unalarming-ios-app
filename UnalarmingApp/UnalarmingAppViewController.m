@@ -8,7 +8,7 @@
 
 #import "UnalarmingAppViewController.h"
 
-const NSUInteger NAV_BAR_HEIGHT = 40;
+const CGFloat NAV_BAR_HEIGHT = 40.0f;
 
 @interface UnalarmingAppViewController ()
 
