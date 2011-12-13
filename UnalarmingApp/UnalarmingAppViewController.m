@@ -9,25 +9,30 @@
 #import "UnalarmingAppViewController.h"
 
 const CGFloat NAV_BAR_HEIGHT = 40.0f;
+const NSInteger PICKER_TAG = 650;
 
 @interface UnalarmingAppViewController ()
 
-- (UIView*) allocSelectionDialogView;
+@property (retain) UIView* selectionDialog;
+@property (retain) NSTimer* meditationTimer;
+
+- (UIView*) allocSelectionDialogViewWithPicker: (UIDatePicker*)picker;
 - (void) showAlert;
-- (void) triggerVibration;
+- (void) triggerVibrationAndShowAlert;
 
 @end
 
 @implementation UnalarmingAppViewController
 
 @synthesize alarmButton = _alarmButton;
-@synthesize picker = _picker;
 @synthesize selectionDialog = _selectionDialog;
+@synthesize meditationTimer = _meditationTimer;
 
 - (void)dealloc
 {
     [_alarmButton release];
     [_selectionDialog release];
+    [_meditationTimer release];
     [super dealloc];
 }
 
@@ -39,19 +44,24 @@ const CGFloat NAV_BAR_HEIGHT = 40.0f;
     // Release any cached data, images, etc that aren't in use.
 }
 
+- (void) cancelPendingTimer {
+    if (YES == self.meditationTimer.isValid) {
+        [self.meditationTimer invalidate];
+    }
+}
+
 - (void) showAlert {
-	// Also issue visual alert
 	UIAlertView *alert = [[[UIAlertView alloc]
-                          initWithTitle:@"Meditation period over!"
+                          initWithTitle:NSLocalizedString(@"Meditation period over!",
+                                                          @"End of period message")
                           message:nil
                           delegate:nil
                           cancelButtonTitle:nil
-                          otherButtonTitles:@"OK", nil] autorelease];
+                          otherButtonTitles:NSLocalizedString(@"OK", @"Confirmation"), nil] autorelease];
     [alert show];
 }
 
-- (void) triggerVibration {
-    // Issue vibrate
+- (void) triggerVibrationAndShowAlert {
 	AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 
     [self showAlert];
@@ -60,35 +70,27 @@ const CGFloat NAV_BAR_HEIGHT = 40.0f;
 
 - (void) finalizeAlarm {
     NSLog(@"finalizeAlarm was called!");
-    NSLog(@"FINAL COUNTDOWN! %@", self.picker.countDownDuration);
+    UIDatePicker* picker = (UIDatePicker *)[self.selectionDialog viewWithTag:PICKER_TAG];
 
-    // I think I want to autorelease this because it'll be a leak otherwise
-	[NSTimer scheduledTimerWithTimeInterval:self.picker.countDownDuration
+	self.meditationTimer = [NSTimer scheduledTimerWithTimeInterval:picker.countDownDuration
                                      target:self
-                                   selector:@selector(triggerVibration)
+                                   selector:@selector(triggerVibrationAndShowAlert)
                                    userInfo:nil
                                     repeats:NO];
+
     NSLog(@"Remove the dialog view and release it");
     [self.selectionDialog removeFromSuperview];
-    // Okay - so I thought I needed to release the dialog view, but when
-    // I do - it causes a EXC_BAD_ACCESS, so I'm releasing something
-    // that I guess isn't really *mine* ... gonna have to think on this.
-    //[selectionDialog release];
 }
 
 
 - (void) cancelSelection {
     NSLog(@"cancelSelection was called - we'll do some clean-up soon");
     [self.selectionDialog removeFromSuperview];
-    // see come in -(void)finalizeAlarm
-    //[selectionDialog release];
 }
 
-- (UIView*)allocSelectionDialogView {
-    self.picker = [[UIDatePicker alloc] init];
-    self.picker.datePickerMode = UIDatePickerModeCountDownTimer;
+- (UIView*)allocSelectionDialogViewWithPicker: (UIDatePicker *)picker {
 
-    CGSize pickerSize = [self.picker sizeThatFits:CGSizeZero];
+    CGSize pickerSize = [picker sizeThatFits:CGSizeZero];
     CGRect screenRect = [[UIScreen mainScreen] applicationFrame];
 
     CGRect viewRect = CGRectMake(0.0,
@@ -101,7 +103,7 @@ const CGFloat NAV_BAR_HEIGHT = 40.0f;
                                    NAV_BAR_HEIGHT,
                                    pickerSize.width,
                                    pickerSize.height);
-    self.picker.frame = pickerRect;
+    picker.frame = pickerRect;
 
     UINavigationBar* navBar = [[UINavigationBar alloc]
                                initWithFrame:CGRectMake(0.0,
@@ -123,26 +125,27 @@ const CGFloat NAV_BAR_HEIGHT = 40.0f;
     UIView* pickerView = [[UIView alloc] initWithFrame: viewRect];
     pickerView.backgroundColor = [UIColor redColor];
 
-    [pickerView addSubview:self.picker];
-    // so I think adding self.picker will up the retain count, but I have "assign"
-    // on self.picker so the app isn't retaining it - but the subview is. Trying to
-    // reason about my retain-counts here for practice.
+    [pickerView addSubview:picker];
+
     [pickerView addSubview:navBar];
-    // the navBar is retained by pickerView, SWEET RELEASE!
+    // the navBar is now retained by pickerView
     [navBar release];
 
     return pickerView;
 }
 
 - (IBAction)setAlarm:(id)sender {
-    NSLog(@"setAlarm clicked...");
+    NSLog(@"setAlarm tapped..."); // Rule #1 - we *always* tap
 
-    self.selectionDialog = [self allocSelectionDialogView];
+    UIDatePicker* picker = [[UIDatePicker alloc] init];
+    picker.tag = PICKER_TAG;
+    picker.datePickerMode = UIDatePickerModeCountDownTimer;
+
+    self.selectionDialog = [self allocSelectionDialogViewWithPicker:picker];
+
+    [picker release];
 
     [self.view.window addSubview:self.selectionDialog];
-
-    // the selectionDialog view has the retain on child widgets now, SWEET RELEASE!
-    [_picker release];
 }
 
 #pragma mark - View lifecycle
@@ -161,7 +164,7 @@ const CGFloat NAV_BAR_HEIGHT = 40.0f;
     // Release any retained subviews of the main view.
     self.alarmButton = nil;
     self.selectionDialog = nil;
-    self.picker = nil;
+    self.meditationTimer = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
