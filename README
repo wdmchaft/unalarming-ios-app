@@ -12,6 +12,10 @@ I present this as a simple step toward learning Objective-C, Cocoa Touch/iOS, an
 
 * Add alarm reminder to the notification/status bar 
 
+## Thanks
+
+I had goofed up that vibration code so that it wouldn't beep on an iPod Touch.  It turned out that the platform as an elegant solution that I found [here] (http://blog.mugunthkumar.com/coding/iphone-tutorial-better-way-to-check-capabilities-of-ios-devices/) in this blog. Thanks Mugunth Kumar (I tracked that link down from this StackOverflow [link](http://stackoverflow.com/questions/4724980/making-the-iphone-vibrate). 
+
 Cheers! 
 
 Andy
