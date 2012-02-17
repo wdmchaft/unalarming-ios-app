@@ -62,7 +62,8 @@ const NSInteger PICKER_TAG = 650;
 }
 
 - (void) triggerVibrationAndShowAlert {
-	AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    // Vibrates on iPhone, beeps on iPod Touch
+	AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
 
     [self showAlert];
 }
